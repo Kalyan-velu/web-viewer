@@ -1,0 +1,13 @@
+.idea
+env
+*.png
+build
+dist/Crawler.exe
+dist
+*.rar
+*.zip
+*.exe
+pp.py
+proxies.txt
+/crw.docx
+*.json

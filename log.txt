@@ -1,0 +1,142 @@
+Starting Application...
+User 1 created. Total 1 browser created
+User 2 created. Total 2 browser created
+User 1 entered
+User 1 waiting for 1800 mili's
+User 1 exited
+User 1's session started:  Sun Oct  8 11:02:15 2023 and ended:  Sun Oct  8 11:02:38 2023
+
+ User 1 took  23.588863372802734
+User 3 created. Total 3 browser created
+User 2 entered
+User 2 waiting for 1800 mili's
+User 2 exited
+User 2's session started:  Sun Oct  8 11:02:26 2023 and ended:  Sun Oct  8 11:02:52 2023
+
+ User 2 took  26.491914987564087
+User 3 entered
+User 3 waiting for 1800 mili's
+User 3 exited
+User 3's session started:  Sun Oct  8 11:02:44 2023 and ended:  Sun Oct  8 11:02:59 2023
+
+ User 3 took  14.253644704818726
+User 4 created. Total 4 browser created
+User 4 entered
+User 4 waiting for 1800 mili's
+User 4 exited
+User 4's session started:  Sun Oct  8 11:03:08 2023 and ended:  Sun Oct  8 11:03:24 2023
+
+ User 4 took  16.334491968154907
+User 5 created. Total 5 browser created
+User 5 entered
+User 5 waiting for 1800 mili's
+User 5 exited
+User 5's session started:  Sun Oct  8 11:03:31 2023 and ended:  Sun Oct  8 11:03:53 2023
+
+ User 5 took  22.2484450340271
+User 6 created. Total 6 browser created
+User 6 entered
+User 6 waiting for 1800 mili's
+User 7 created. Total 7 browser created
+User 6 exited
+User 6's session started:  Sun Oct  8 11:03:55 2023 and ended:  Sun Oct  8 11:04:24 2023
+
+ User 6 took  28.656596183776855
+User 8 created. Total 8 browser created
+User 7 entered
+User 7 waiting for 1800 mili's
+User 7 exited
+User 7's session started:  Sun Oct  8 11:04:22 2023 and ended:  Sun Oct  8 11:04:44 2023
+
+ User 7 took  21.479027271270752
+User 8 entered
+User 8 waiting for 1800 mili's
+User 8 exited
+User 8's session started:  Sun Oct  8 11:04:38 2023 and ended:  Sun Oct  8 11:04:56 2023
+
+ User 8 took  17.7413911819458
+User 9 created. Total 9 browser created
+User 9 entered
+User 10 created. Total 10 browser created
+User 9 waiting for 1800 mili's
+User 9 exited
+User 9's session started:  Sun Oct  8 11:04:57 2023 and ended:  Sun Oct  8 11:05:24 2023
+
+ User 9 took  26.600347757339478
+User 10 entered
+User 10 waiting for 1800 mili's
+User 11 created. Total 11 browser created
+User 10 exited
+User 10's session started:  Sun Oct  8 11:05:18 2023 and ended:  Sun Oct  8 11:05:36 2023
+
+ User 10 took  18.371862649917603
+User 11 entered
+User 12 created. Total 12 browser created
+User 11 waiting for 1800 mili's
+User 11 exited
+User 11's session started:  Sun Oct  8 11:05:34 2023 and ended:  Sun Oct  8 11:06:05 2023
+
+ User 11 took  30.794697523117065
+User 13 created. Total 13 browser created
+User 12 entered
+User 12 waiting for 1800 mili's
+User 12 exited
+User 12's session started:  Sun Oct  8 11:05:54 2023 and ended:  Sun Oct  8 11:06:15 2023
+
+ User 12 took  20.7918221950531
+User 14 created. Total 14 browser created
+User 13 entered
+User 13 waiting for 1800 mili's
+User 13 exited
+User 13's session started:  Sun Oct  8 11:06:07 2023 and ended:  Sun Oct  8 11:06:26 2023
+
+ User 13 took  19.205352306365967
+User 14 entered
+User 15 created. Total 15 browser created
+User 14 waiting for 1800 mili's
+User 14 exited
+User 14's session started:  Sun Oct  8 11:06:19 2023 and ended:  Sun Oct  8 11:06:39 2023
+
+ User 14 took  20.802934408187866
+User 15 entered
+User 15 waiting for 1800 mili's
+User 15 exited
+User 15's session started:  Sun Oct  8 11:06:36 2023 and ended:  Sun Oct  8 11:06:53 2023
+
+ User 15 took  16.3078670501709
+User 16 created. Total 16 browser created
+User 17 created. Total 17 browser created
+User 16 entered
+User 16 waiting for 1800 mili's
+User 16 exited
+User 16's session started:  Sun Oct  8 11:07:00 2023 and ended:  Sun Oct  8 11:07:23 2023
+
+ User 16 took  22.79764175415039
+User 18 created. Total 18 browser created
+User 17 entered
+User 18 entered
+User 17 waiting for 1800 mili's
+User 18 waiting for 1800 mili's
+User 17 exited
+User 17's session started:  Sun Oct  8 11:07:17 2023 and ended:  Sun Oct  8 11:07:55 2023
+
+ User 17 took  38.13596701622009
+User 18 exited
+User 18's session started:  Sun Oct  8 11:07:29 2023 and ended:  Sun Oct  8 11:07:55 2023
+
+ User 18 took  26.492793083190918
+User 19 created. Total 19 browser created
+User 20 created. Total 20 browser created
+User 19 entered
+User 19 waiting for 1800 mili's
+User 19 exited
+User 19's session started:  Sun Oct  8 11:07:57 2023 and ended:  Sun Oct  8 11:08:24 2023
+
+ User 19 took  26.91433048248291
+User 20 entered
+User 20 waiting for 1800 mili's
+User 20 exited
+User 20's session started:  Sun Oct  8 11:08:11 2023 and ended:  Sun Oct  8 11:08:32 2023
+
+ User 20 took  20.95805048942566
+
