@@ -46,6 +46,7 @@ class TaskManager:
         stop_event: A threading Event used to stop the tasks.
 
     """
+
     def __init__(self, main_self):
         self.main = main_self
         self.log_print = main_self.log_print
@@ -86,6 +87,7 @@ class TaskManager:
                     tasks.append(task)
                     self.log_print(f"\n A browser has been assigned to User {user_id}. \n The total number of created "
                                    f"browsers is now {len(tasks)}.")
+                    self.main.log_to_total_view()
                     await asyncio.sleep(random.uniform(10, 30))
 
                     if self.main.stop_event.is_set():
@@ -138,7 +140,7 @@ class TaskManager:
             self.user_data[user_id]["start_time"] = start_time
             if self.user_data[user_id].get("end_time") is not None:
                 break
-            browser_instance = await self.browser_setup(playwright,user_id, domain, proxy_server)
+            browser_instance = await self.browser_setup(playwright, user_id, domain, proxy_server)
 
             if browser_instance is None:
                 return
@@ -163,7 +165,7 @@ class TaskManager:
                 self.main.log_print(f"Error occurred while crawling the page: {e}", message_type="error")
                 await asyncio.sleep(1)  # wait a bit before retrying
 
-    async def browser_setup(self, playwright,user_id, domain, proxy_server):
+    async def browser_setup(self, playwright, user_id, domain, proxy_server):
         """
         Set up the browser for a given user.
 
@@ -194,8 +196,6 @@ class TaskManager:
             'User-Agent': user_agent_chosen,
             'Accept-Language': 'en-US,en;q=0.5'
         }
-
-
 
         try:
             if len(proxy_parts) >= 4:
@@ -258,8 +258,8 @@ class TaskManager:
                 await page.get_by_role("button", name="OK").click()
                 await page.wait_for_url('**/payment', wait_until='networkidle')
                 await page.wait_for_load_state('networkidle')
-                timeout = 18000
-                self.main.log_print(f"\n User {user_id} ({ip_used}) waiting for {timeout} milliseconds", message_type="info")
+                timeout = 180000
+                self.main.log_print(f"\n User {user_id} ({ip_used}) waiting for 3 minutes", message_type="info")
 
                 if self.main.stop_event.is_set():
                     self.log_print(f"User {user_id} task stopped due to Stop button press.")
@@ -270,13 +270,12 @@ class TaskManager:
                 self.user_data[user_id]["end_time"] = end_time
                 elapsed_time = self.user_data[user_id]["end_time"] - self.user_data[user_id]["start_time"]
                 self.main.log_print(f" User {user_id} exited", message_type="info")
-                self.main.ended += 1
-                self.main.log_to_ended_view(user_id)
 
                 # Check if all desired views have exited and exit the loop.
                 if self.main.ended >= self.input_number:
                     return
-
+                self.main.ended += 1
+                self.main.log_to_ended_view(user_id)
                 self.main.log_to_total_view()
                 await asyncio.sleep(1)
         except Error as e:
@@ -397,6 +396,7 @@ class Main(tk.Frame):
             Get the list of proxies from the proxy file.
 
     """
+
     def __init__(self, root: tk.Tk) -> None:
         super().__init__(root)
         self.selected_domain = None
@@ -444,9 +444,9 @@ class Main(tk.Frame):
         self.num_entry.grid(row=4, column=0)
         self.num_entry.bind('<Return>', self.save_entry)
 
-        self.log_total_label = tk.Label(self, text="Ongoing \n Sessions")
-        self.log_total_label.grid(row=2, column=0)
-        self.log_total = tk.Text(self, height=3, width=20)
+        self.log_total_label = tk.Label(self, text="Total \n Counts")
+        self.log_total_label.grid(row=5, column=3)
+        self.log_total = tk.Text(self, height=4, width=24)
         self.log_total.grid(row=4, column=3)
 
         self.domain_var = tk.StringVar()
@@ -478,7 +478,9 @@ class Main(tk.Frame):
     def append_to_total_log(self):
         self.log_total.delete('1.0', tk.END)
         self.log_total.insert(tk.END,
-                              f"\n Total {self.views} user created \n Total {self.ended} user exited \n Total {self.error} user paused")
+                              f"Total {self.views} user created\n"
+                              f"Total {self.ended} user exited\n"
+                              f"Total {self.error} user paused")
         self.log_total.see(tk.END)
 
     def log_print(self, *args, message_type='info'):
@@ -528,7 +530,8 @@ class Main(tk.Frame):
         else:
             self.stop_event.set()
             self.start_stop_button.config(text="Start", state="normal")
-            self.check_input()
+            self.running.set(False)  # Set the running state to False
+            self.check_input()  # Recheck and enable/disable the button
 
     def get_input_number(self):
         temp = self.input_number
