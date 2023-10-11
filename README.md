@@ -1,4 +1,4 @@
-# Project Title
+# Web Crawler
 
 This is a Python script that automates interacting with the provided URLs. It uses Python 3.11.5, Tkinter for building a User Interface, and Playwright, a browser automation library to visit the URLs and interact with the pages in an automated manner.
 
