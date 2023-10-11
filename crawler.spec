@@ -1,7 +1,7 @@
 # -*- mode: python ; coding: utf-8 -*-
 
 a = Analysis(
-    ['task_manager.py'],
+    ['main.py'],
     pathex=[],
     binaries=[],
     datas=[('E:\\AtoZDebug\\visitor\\env\\Lib\\site-packages\\fake_useragent\\data\\browsers.json',
